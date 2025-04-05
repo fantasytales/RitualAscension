@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ritual Ascension</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="main-container">
+  <div class="game-area">
+    <h1>Ritual Ascension</h1>
+
+    <div id="energyDisplay">Spiritual Energy: 0</div>
+    <div id="followerDisplay">Followers: 0</div>
+
+    <div id="mainCircle" onclick="gainEnergy()">
+      <div id="sigil"></div>
+    </div>
+    <p id="clickHint">🧙‍♂️ Tap JOSH to gather spiritual energy</p>
+
+    <div class="button-group">
+      <button class="icon-btn bless" onclick="buyBless()">
+        <img src="assets/bless.png" alt="Bless"><br>
+        💫 Bless<br><span class="cost">Cost: <span id="blessCost">50</span></span><br>
+        <span class="desc">Gain more energy per click</span>
+      </button>
+
+      <button class="icon-btn curse" onclick="buyCurse()">
+        <img src="assets/curse.png" alt="Curse"><br>
+        ☠️ Curse<br><span class="cost">Cost: <span id="curseCost">100</span></span><br>
+        <span class="desc">Generates passive energy over time</span>
+      </button>
+
+      <button class="icon-btn sacrifice" onclick="sacrifice()">
+        <img src="assets/sacrifice.png" alt="Sacrifice"><br>
+        🔥 Sacrifice<br><span class="cost">Resets power for x2 multiplier</span><br>
+        <span class="desc">Resets progress for a x2 multiplier</span>
+      </button>
+
+      <button class="icon-btn summon" onclick="summonFollower()">
+        <img src="assets/summon.png" alt="Summon"><br>
+        👥 Summon Follower<br><span class="cost">Cost: 100 energy</span><br>
+        <span class="desc">Increases passive energy + lore</span>
+      </button>
+
+      <button class="icon-btn tome" onclick="buyDarkTome()">
+        <img src="assets/tome.png" alt="Dark Tome"><br>
+        📖 Dark Tome<br><span class="cost">Cost: <span id="tomeCost">250</span></span><br>
+        <span class="desc">Massive passive energy boost</span>
+      </button>
+
+      <button class="icon-btn pact" onclick="buyBloodPact()">
+        <img src="assets/pact.png" alt="Blood Pact"><br>
+        🩸 Blood Pact<br><span class="cost">Cost: <span id="pactCost">300</span></span><br>
+        <span class="desc">One-time +500 energy boost</span>
+      </button>
+    </div>
+
+    <div class="control-buttons">
+      <button onclick="toggleMusic()">🎵 <span id="musicStatus">Mute</span></button>
+      <button onclick="resetGame()">🧹 Reset Game</button>
+    </div>
+  </div>
+
+  <div class="lore-panel">
+    <h2>Lore & Quests</h2>
+    <div id="loreEntries"></div>
+    <div id="questLog"></div>
+    <h2>Game Creator: Fantasytale</h2>
+    <h3>Version: beta v1.0</h3>
+  </div>
+</div>
+
+<!-- Audio -->
+<audio id="clickSound" src="assets/click.wav"></audio>
+<audio id="blessSound" src="assets/bless.mp3"></audio>
+<audio id="sacrificeSound" src="assets/sacrifice.wav"></audio>
+<audio id="bgMusic" src="assets/music.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
