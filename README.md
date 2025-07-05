@@ -39,3 +39,7 @@ This is a **beta release** — feedback and contributions are welcome!
 💬 Discord: [https://discord.gg/ritual-net](https://discord.gg/ritual-net)
 
 ---
+
+## Next phase
+
+
