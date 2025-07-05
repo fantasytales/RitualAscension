@@ -43,3 +43,5 @@ This is a **beta release** — feedback and contributions are welcome!
 ## Next phase
 
 Under development
+
+---
